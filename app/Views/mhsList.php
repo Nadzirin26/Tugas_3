@@ -10,12 +10,12 @@
 				<div class="col-md-4">&nbsp;</div>
 				<div class="col-md-4"><h3>Data Mahasiswa</h3>
 					<table class="table table-responsive table-bordered table-striped">
-						<tr><td>No</td><td>NIM</td><td>Nama</td><td>Created At</td><td>Deleted At</td><td>Delete</td></tr>
+						<tr><td>No</td><td>NIM</td><td>Nama</td><td>Created At</td><td>Delete</td></tr>
 						<?php 
 
 							foreach ($rs as $mahasiswa => $list)
 							{
-								echo '<tr><td><a href="?act=tampil-data&i='.$list['id'].'">'.$list['id'].'</a></td><td>'.$list['nim'].'</td><td>'.$list['nama'].'</td>'.'<td>'.$list['Created_at'].'</td>'.'<td>'.$list['Deleted_at'].'</td>'.'<td>'.'<a href="/mvc-example/?act=delete&id='.$list['id'].'">Hapus Data</a>'.'</td></tr>';
+								echo '<tr><td><a href="?act=tampil-data&i='.$list['id'].'">'.$list['id'].'</a></td><td>'.$list['nim'].'</td><td>'.$list['nama'].'</td>'.'<td>'.$list['created_at'].'</td>'.'<td>'.'<a href="/mvc-example/?act=delete&id='.$list['id'].'">Hapus Data</a>'.'</td></tr>';
 							}
 
 						?>

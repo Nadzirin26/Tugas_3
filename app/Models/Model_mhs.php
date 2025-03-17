@@ -16,10 +16,11 @@
             $this->dbh = $db->getInstance();
         }
 
-        function simpanData($nim,$nama)
+        function simpanData($nim, $nama)
         {
-            $rs = $this->dbh->prepare("INSERT INTO mahasiswa (nim,nama) VALUES (?,?)");
-            $rs->execute([$nim,$nama]);
+            $created_at = date('Y-m-d H:i:s'); // Set the current timestamp
+            $rs = $this->dbh->prepare("INSERT INTO mahasiswa (nim, nama, created_at) VALUES (?, ?, ?)");
+            $rs->execute([$nim, $nama, $created_at]);
         }
 
         function lihatData()
